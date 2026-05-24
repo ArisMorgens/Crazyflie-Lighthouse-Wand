@@ -11,3 +11,5 @@ One Crazyflie platform (held in the hand) acts as the **wand** and broadcasts it
 See [docs/building_and_flashing.md](docs/building_and_flashing.md) for the full building and flashing guide.
 
 See [docs/architecture.md](docs/architecture.md) for the system design and grasping algorithm.
+
+See [hardware/README.md](hardware/README.md) for the electronics and the mechanics of the wand.
