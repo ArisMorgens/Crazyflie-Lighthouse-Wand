@@ -3,25 +3,6 @@ revision = 3
 requires-python = ">=3.13"
 
 [[package]]
-name = "app-wand"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "cflib" },
-    { name = "colorama" },
-    { name = "pyyaml" },
-    { name = "tqdm" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "cflib", specifier = ">=0.1.32" },
-    { name = "colorama", specifier = ">=0.4.6" },
-    { name = "pyyaml", specifier = ">=6.0" },
-    { name = "tqdm", specifier = ">=4.0.0" },
-]
-
-[[package]]
 name = "cflib"
 version = "0.1.32"
 source = { registry = "https://pypi.org/simple" }
@@ -73,6 +54,25 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/5c/9d/d06d53994bb164564ec142ef631a4afa31e324994cf223f169ecca127f3a/libusb_package-1.0.26.3-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:63257653ee1ee06aa836e942f4bb89a1d7a0c6ae3d6183647a9011e585ffa1e3", size = 71036, upload-time = "2025-04-01T14:53:29.011Z" },
     { url = "https://files.pythonhosted.org/packages/32/3d/97f775a1d582548b1eb2a42444c58813e5fd93d568fc3b9ace59f64df527/libusb_package-1.0.26.3-cp313-cp313-win32.whl", hash = "sha256:05db4cc801db2e6373a808725748a701509f9450fecf393fbebab61c45d50b50", size = 77642, upload-time = "2025-04-01T12:58:07.774Z" },
     { url = "https://files.pythonhosted.org/packages/f1/c4/d5234607697ca60593fbef88428a154317ac31f5c58ee23337b8a9360e91/libusb_package-1.0.26.3-cp313-cp313-win_amd64.whl", hash = "sha256:1cd4aec825dac2b4fa5d23b37f6d72e63a1127987e5a073dabeb7b73528623a3", size = 90593, upload-time = "2025-04-01T12:58:08.676Z" },
+]
+
+[[package]]
+name = "lighthouse-wand"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "cflib" },
+    { name = "colorama" },
+    { name = "pyyaml" },
+    { name = "tqdm" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "cflib", specifier = ">=0.1.32" },
+    { name = "colorama", specifier = ">=0.4.6" },
+    { name = "pyyaml", specifier = ">=6.0" },
+    { name = "tqdm", specifier = ">=4.0.0" },
 ]
 
 [[package]]

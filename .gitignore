@@ -1,0 +1,8 @@
+firmware/build/
+firmware/*.o
+firmware/.*.cmd
+firmware/src/*.o
+firmware/src/.*.cmd
+
+__pycache__/
+.venv/
