@@ -3,7 +3,7 @@
 Mass flashing script for Crazyflie swarm.
 
 This script reads drone configurations from drones_config.yaml and flashes
-selected drones with the appropriate firmware (pilot or sniffer app).
+selected drones with the appropriate firmware.
 """
 
 import argparse
@@ -114,7 +114,7 @@ class SwarmFlasher:
             ids: List of specific drone IDs to include
             id_range: Tuple of (start, end) IDs (inclusive)
             platform: Filter by platform (cf2, cf21bl)
-            app_type: Filter by app type (pilot, sniffer)
+            app_type: Filter by app type (wand, receiver, receiver_hlc)
 
         Returns:
             List of matching DroneConfig objects
@@ -141,7 +141,7 @@ class SwarmFlasher:
 
         Args:
             platform: Platform identifier (cf2, cf21bl)
-            app_type: App type (pilot, sniffer)
+            app_type: App type (wand, receiver, receiver_hlc)
             extra_flags: Additional make flags
 
         Returns:
@@ -382,7 +382,7 @@ def parse_range(range_str: str) -> Tuple[int, int]:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Mass flash Crazyflie swarm drones with pilot or sniffer firmware.",
+        description="Mass flash Crazyflie swarm drones with wand or receiver firmware.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
@@ -395,14 +395,14 @@ Examples:
   # Flash a range of drones
   %(prog)s --range 1-6
 
-  # Flash only sniffer drones
-  %(prog)s --app-type sniffer
+  # Flash only receiver drones
+  %(prog)s --app-type receiver
 
   # Flash only brushless drones
   %(prog)s --platform cf21bl
 
-  # Combine filters: flash pilot drones in range 1-6
-  %(prog)s --range 1-6 --app-type pilot
+  # Combine filters: flash receiver drones in range 1-6
+  %(prog)s --range 1-6 --app-type receiver
         """
     )
 

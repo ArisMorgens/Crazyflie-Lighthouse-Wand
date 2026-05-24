@@ -3,11 +3,14 @@
 # app_type: receiver     -> flashes the basic commander receiver firmware
 # app_type: receiver_hlc -> flashes the high-level commander receiver firmware
 
-firmware_base: ../../
 build_jobs: 8
 
 # Platform-specific build configurations
 platforms:
+  cf2:
+    defconfig: cf2_defconfig
+    make_flags: []
+
   cf21bl:
     defconfig: cf21bl_defconfig
     make_flags: []
@@ -17,7 +20,7 @@ platforms:
     make_flags: []
 
 # Drone definitions
-# Each drone has: id, uri, platform (cf2/bolt), and app_type (wand/receiver)
+# Each drone has: id, uri, platform (cf2/cf21bl/bolt), and app_type (wand/receiver/receiver_hlc)
 drones:
   # Wand drone
   - id: 0
