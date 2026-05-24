@@ -1,0 +1,42 @@
+# Configuration file for the wand app
+# app_type: wand     -> flashes the wand broadcaster firmware
+# app_type: receiver     -> flashes the basic commander receiver firmware
+# app_type: receiver_hlc -> flashes the high-level commander receiver firmware
+
+firmware_base: ../../
+build_jobs: 8
+
+# Platform-specific build configurations
+platforms:
+  cf21bl:
+    defconfig: cf21bl_defconfig
+    make_flags: []
+
+  bolt:
+    defconfig: bolt_defconfig
+    make_flags: []
+
+# Drone definitions
+# Each drone has: id, uri, platform (cf2/bolt), and app_type (wand/receiver)
+drones:
+  # Wand drone
+  - id: 0
+    uri: radio://0/65/2M/ABAD1DEA00
+    platform: bolt
+    app_type: wand
+
+# Receiver drones
+  - id: 1
+    uri: radio://0/65/2M/ABAD1DEA01
+    platform: cf21bl
+    app_type: receiver
+
+  - id: 2
+    uri: radio://0/65/2M/ABAD1DEA02
+    platform: cf21bl
+    app_type: receiver_hlc
+
+  - id: 3
+    uri: radio://0/65/2M/ABAD1DEA03
+    platform: cf21bl
+    app_type: receiver

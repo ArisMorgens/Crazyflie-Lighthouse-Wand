@@ -1,0 +1,5 @@
+obj-y += wand.o
+obj-y += wand_sounds.o
+obj-y += receiver.o
+obj-y += receiver_hlc.o
+obj-y += button.o

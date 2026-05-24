@@ -1,0 +1,12 @@
+[project]
+name = "lighthouse-wand-scripts"
+version = "0.1.0"
+description = "Lighthouse wand app - mass flash and geometry tools for Crazyflie."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "cflib>=0.1.32",
+    "colorama>=0.4.6",
+    "pyyaml>=6.0",
+    "tqdm>=4.0.0",
+]
