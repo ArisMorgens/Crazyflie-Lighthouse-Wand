@@ -288,7 +288,7 @@ void appMain()
             break;
         }
 
-        vTaskDelay(M2T(20)); // 50 Hz
+        vTaskDelay(M2T(100));
     }
 }
 
